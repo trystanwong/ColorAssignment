@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 /**
  * MainActivity class used to run our app on our tablet
+ * @Author: Trystan Wong
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       
+
         setContentView(R.layout.activity_main);
 
         //Seekbars
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //Draw object used to draw our custom elements on the SurfaceView
         Draw drawing = new Draw(this);
         drawing = findViewById(R.id.canvas);
+
 
         //ArrayList of the drawn elements
         ArrayList<CustomElement> elements = drawing.getElements();

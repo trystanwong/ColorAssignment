@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 /**
  * Draw Class is the class that extends SurfaceView that our
+ * @Author: Trystan Wong
  */
 public class Draw extends SurfaceView {
 
-    //private CustomElement instance variables to be drawn on the SurfaceView
-    //private CustomElement[] elements;
+    //private ArrayList of CustomElements
     private ArrayList<CustomElement> elements;
 
     //getter for the array of CustomElements
@@ -50,10 +50,10 @@ public class Draw extends SurfaceView {
      */
     public void initialize() {
 
-        //setting the background color of the surface view to blue
+
         this.setBackgroundColor(Color.BLUE);
 
-        //creating customElement objects to be added to our elements array
+        //customElement objects that are going to be drawn
 
         CustomElement sun = new CustomElement("Sun",100,100,
                 255,255,0,200,0,true);
@@ -82,7 +82,7 @@ public class Draw extends SurfaceView {
         CustomElement road = new CustomElement("Road", 600,775,
                 80,80,80,4000,200,false);
 
-        //initializing the elements array to store all of our CustomElement objects.
+        //ArrayList of the CustomElement objects
         elements = new ArrayList<>();
 
         //adding the CustomElements to our elements ArrayList in the order they are added
@@ -111,8 +111,7 @@ public class Draw extends SurfaceView {
         super.onDraw(canvas);
 
         //going through each element in the elements array and drawing them on the given canvas
-        for(CustomElement c : elements)
-        {
+        for(CustomElement c : elements) {
             c.draw(canvas);
         }
 

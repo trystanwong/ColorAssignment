@@ -6,15 +6,21 @@ import android.widget.SeekBar;
  * Listener for the the Blue SeekBar
  *
  * implements the OnSeekBarChangeListener interface and its methods.
+ * @author: Trystan Wong
  */
 public class BlueListener implements SeekBar.OnSeekBarChangeListener {
 
     //private CustomElement instance variable to access its setBlue() method.
     private CustomElement ce;
 
+    /**
+     * Constructor for the BlueListener class
+     * @param initCE - CustomElement object
+     */
     public BlueListener(CustomElement initCE){
         ce = initCE;
     }
+
     /**
      External Citation
      Date: 08 February 2022

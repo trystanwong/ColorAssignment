@@ -4,7 +4,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
-/** This class represents an element (circle or rectangle) drawn on the surfaceView*/
+/**
+ * This class represents an element (circle or rectangle) drawn on the surfaceView
+ * @Author: Trystan Wong
+ * */
 public class CustomElement {
 
     //instance variables

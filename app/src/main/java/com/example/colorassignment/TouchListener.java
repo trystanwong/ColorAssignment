@@ -9,8 +9,9 @@ import java.util.ArrayList;
 /**
  * TouchListener implements the OnTouchListener interface to determine what object is being touched
  * on the screen
+ * @author: Trystan Wong
  */
-public class TouchListener implements View.OnTouchListener{
+public class TouchListener implements View.OnTouchListener {
 
     //instance variables
     private ArrayList<CustomElement> elements; //CustomElements that can be touched
@@ -28,7 +29,7 @@ public class TouchListener implements View.OnTouchListener{
      * @param initG - green seekbar
      * @param initB - blue seekbar
      */
-    public TouchListener(ArrayList<CustomElement> initCE, TextView initTV, SeekBar initR, SeekBar initG, SeekBar initB){
+    public TouchListener(ArrayList<CustomElement> initCE, TextView initTV, SeekBar initR, SeekBar initG, SeekBar initB) {
 
         //assigning values to the corresponding private instance variables
         elements = initCE;
@@ -57,7 +58,7 @@ public class TouchListener implements View.OnTouchListener{
 
         //going through each element in the ArrayList of CustomElements to see if it is within
         //range of the user's touch
-        for(CustomElement e : elements){
+        for(CustomElement e : elements) {
 
             //if the object is a circle
             if(e.isCircle) {
@@ -88,9 +89,9 @@ public class TouchListener implements View.OnTouchListener{
                 }
             }
             //if the object is not a circle (it is a rectangle)
-            else{
+            else {
                 //checks if the use
-                // r's touch is within the area of the rectangle
+                // if the user's touch is within the area of the rectangle
                 if (Math.abs(e.getX() - x) <= e.length/2) {
                     if (Math.abs(e.getY() - y) < e.height/2) {
 
