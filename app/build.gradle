@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.colorassignment"
+        applicationId "com.example.Trystan_Wong_Color"
         minSdk 29
         targetSdk 32
         versionCode 1
